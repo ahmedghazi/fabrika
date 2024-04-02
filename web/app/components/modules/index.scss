@@ -44,6 +44,8 @@
         position: absolute;
         cursor: move;
         pointer-events: all;
+        transition: transform 0.2s ease;
+        transform: translate(0);
       }
       img {
         height: 4em !important;

@@ -1,5 +1,6 @@
 import { ModuleSliderUI, SanityImageAsset } from "@/app/types/schema";
 import { urlFor } from "@/app/utils/sanity-utils";
+import { _getDocSize } from "@/app/utils/utils";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Draggable from "react-draggable";
@@ -15,29 +16,16 @@ const Sticker = ({ asset }: StickerIProps) => {
   const [ready, setReady] = useState<boolean>(false);
 
   useEffect(() => {
-    const docSize = _getDocSize();
-    const x = Math.random() * docSize.w;
-    const y = Math.random() * docSize.h;
-    console.log(docSize);
-    console.log(y);
-    setPos({ x: x, y: y });
+    _placeRandomly();
     setReady(true);
   }, []);
 
-  const _getDocSize = () => {
-    const body = document.body;
-    const html = document.documentElement;
-    const height = Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
-    return {
-      w: window.innerWidth,
-      h: height,
-    };
+  const _placeRandomly = () => {
+    const docSize = _getDocSize();
+    const x = Math.random() * docSize.w;
+    const y = Math.random() * docSize.h;
+    console.log(x, y);
+    setPos({ x: x, y: y });
   };
 
   if (!ready) return null;
@@ -71,12 +59,16 @@ type StickersUIProps = {
   input: ModuleSliderUI;
 };
 const StickersdUI = ({ input }: StickersUIProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const docSize = _getDocSize();
+    if (ref && ref.current) {
+      ref.current.style.height = `${docSize.h}px`;
+    }
+  }, []);
+
   return (
-    <section className='module module--stickers-ui'>
-      {input.items &&
-        input.items.map((item, i) => (
-          <Sticker asset={item.image?.asset} key={i} />
-        ))}
+    <section className='module module--stickers-ui' ref={ref}>
       {input.items &&
         input.items.map((item, i) => (
           <Sticker asset={item.image?.asset} key={i} />

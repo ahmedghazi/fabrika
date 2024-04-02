@@ -218,7 +218,7 @@ export interface PageModulaire extends SanityDocument {
   /**
    * Image clef — `image`
    *
-   * Visible on liste pages, project cards (largeur 1400px)
+   * Visible on liste pages, page cards (largeur 1400px)
    */
   imageCover?: {
     _type: "image";
@@ -228,9 +228,9 @@ export interface PageModulaire extends SanityDocument {
   };
 
   /**
-   * Image clef — `image`
+   * Image Hero — `image`
    *
-   * Visible single page before the title
+   * Visible on single page before the title
    */
   imageHero?: {
     _type: "image";
@@ -247,18 +247,11 @@ export interface PageModulaire extends SanityDocument {
   excerpt?: LocaleString;
 
   /**
-   * Modules — `array`
+   * Texte — `localeBlockContent`
    *
-   * Zone de contenu Modulaire (images, textes, embed)
+   *
    */
-  modules?: Array<
-    | SanityKeyed<ModuleImagesUI>
-    | SanityKeyed<ModuleTextsUI>
-    | SanityKeyed<ModuleSliderUI>
-    | SanityKeyed<ModuleFeaturedPagesUI>
-    | SanityKeyed<ModuleMarqueeUI>
-    | SanityKeyed<ModuleStickersUI>
-  >;
+  text?: LocaleBlockContent;
 }
 
 /**
@@ -446,7 +439,7 @@ export type LinkAnchor = {
   /**
    * target — `string`
    *
-   *
+   * html anchor id
    */
   target?: string;
 };

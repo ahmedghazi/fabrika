@@ -20,9 +20,6 @@ export const blockContent = `
 	},
 	fr[]{
 		...,
-		_type == "image" => {
-			asset->
-		},
 		markDefs[] {
 			...,
 			_type == "linkInternal" => {
@@ -48,7 +45,10 @@ export const pageCard = `
   title,
 	supTitle,
 	subTitle,
-	excerpt
+	excerpt,
+	text{
+		${blockContent}
+	}
 `;
 
 export const moduleTextsUI = `

@@ -96,12 +96,18 @@ export default defineType({
       group: 'editorial',
     }),
     defineField({
-      name: 'modules',
-      title: 'Modules',
-      description: 'Zone de contenu Modulaire (images, textes, embed)',
-      type: 'array',
-      of: modulesList,
+      name: 'text',
+      title: 'Texte',
+      type: 'localeBlockContent',
       group: 'editorial',
     }),
+    // defineField({
+    //   name: 'modules',
+    //   title: 'Modules',
+    //   description: 'Zone de contenu Modulaire (images, textes, embed)',
+    //   type: 'array',
+    //   of: modulesList,
+    //   group: 'editorial',
+    // }),
   ],
 })

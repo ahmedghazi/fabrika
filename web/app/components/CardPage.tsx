@@ -1,10 +1,11 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PageModulaire } from "../types/schema";
 import { _localizeField, _slugify } from "../utils/utils";
 import Link from "next/link";
 import Figure from "./ui/Figure";
 import ContentPage from "./ContentPage";
+import { publish } from "pubsub-js";
 
 type Props = {
   input: PageModulaire;
@@ -13,6 +14,10 @@ type Props = {
 const CardPage = ({ input }: Props) => {
   // console.log(input);
   const [active, setActive] = useState<boolean>(false);
+  useEffect(() => {
+    publish("SHUFFLE_STICKERS");
+  }, [active]);
+
   return (
     <article
       className='card-page'

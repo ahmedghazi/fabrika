@@ -2,6 +2,7 @@ import React from "react";
 import { PageModulaire } from "../types/schema";
 import Figure from "./ui/Figure";
 import { _localizeField } from "../utils/utils";
+import { PortableText } from "next-sanity";
 
 type Props = {
   input: PageModulaire;
@@ -21,11 +22,7 @@ const ContentPage = ({ input }: Props) => {
             <h1 className='text-xl'>{_localizeField(input.title)}</h1>
           </div>
           <div className='text text-lg'>
-            {/* <PortableText value={_localizeField(input.excerpt)} /> */}
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error,
-            tempora corporis atque esse maiores dignissimos vel aspernatur eum
-            nam possimus. Porro beatae vitae iusto quo natus quae fugit sapiente
-            recusandae.
+            <PortableText value={_localizeField(input.text)} />
           </div>
         </div>
       </div>
