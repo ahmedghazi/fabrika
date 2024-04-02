@@ -1,0 +1,8 @@
+.content-page {
+  background-color: white;
+  color: var(--color-primary);
+  padding-bottom: toRem(43);
+  .header {
+    padding: toRem(43) 0;
+  }
+}
