@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactSlick from "react-slick";
-import SliderCursorPrevNextText from "./SliderCursorPrevNextText";
+// import SliderCursorPrevNextText from "./SliderCursorPrevNextText";
 import PubSub from "pubsub-js";
 import "./slick.css"; //impossible de l'importer direct ici à cause de purge-css
 

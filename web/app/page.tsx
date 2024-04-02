@@ -28,7 +28,7 @@ export async function generateMetadata({
   };
 }
 
-const Home: ({ params }: PageProps) => Promise<JSX.Element> = async ({
+const Page: ({ params }: PageProps) => Promise<JSX.Element> = async ({
   params,
 }) => {
   const { isEnabled: preview } = draftMode();
@@ -50,4 +50,4 @@ const Home: ({ params }: PageProps) => Promise<JSX.Element> = async ({
   );
 };
 
-export default Home;
+export default Page;
