@@ -3,9 +3,11 @@ import ReactSlick from "react-slick";
 // import SliderCursorPrevNextText from "./SliderCursorPrevNextText";
 import PubSub from "pubsub-js";
 import "./slick.css"; //impossible de l'importer direct ici à cause de purge-css
+import useDeviceDetect from "@/app/hooks/useDeviceDetect";
 
 const Slider = ({ children, settingsOverride }) => {
   const sliderRef = useRef();
+  const { isMobile } = useDeviceDetect();
 
   const [index, setIndex] = useState(0);
 
@@ -32,8 +34,8 @@ const Slider = ({ children, settingsOverride }) => {
     autoplaySpeed: 3000,
     autoplay: false,
     dots: false,
-    // speed: isMobile ? 250 : 500,
-    speed: 500,
+    speed: isMobile ? 250 : 500,
+    // speed: 500,
     swipeToSlide: true,
     slidesToScroll: 1,
     cssEase: "cubic-bezier(0.53, 0, 0.36, 1)",
