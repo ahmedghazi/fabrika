@@ -31,6 +31,7 @@
       article:nth-child(odd) {
         & > .flex {
           flex-direction: row-reverse;
+          text-align: right;
         }
       }
     }
@@ -44,8 +45,12 @@
         position: absolute;
         cursor: move;
         pointer-events: all;
-        transition: transform 0.2s ease;
+        //transition: transform 0.2s ease;
         transform: translate(0);
+        &:active,
+        &:visited {
+          z-index: 49;
+        }
       }
       img {
         height: 4em !important;

@@ -17,6 +17,32 @@ header {
   }
 
   @media all and (max-width: $md) {
-    padding: var(--space-sm);
+    padding: var(--space-md-mobile);
+    .site-name {
+      img {
+        max-width: 113px;
+      }
+    }
+    nav {
+      .burger-wrapper.is-active + .inner {
+        display: block;
+      }
+      .inner {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: var(--header-height);
+        width: 100%;
+        height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height));
+        background-color: var(--color-primary);
+
+        ul {
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+    }
   }
 }

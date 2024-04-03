@@ -16,12 +16,12 @@ const ContentPage = ({ input }: Props) => {
           <Figure asset={input.imageHero?.asset} width={2000} />
         )}
       </div>
-      <div className='px-lg'>
+      <div className='px-md-mobile md:px-lg'>
         <div className='row col-md-10 col-xs-12 col-md-offset-1'>
           <div className='header'>
             <h1 className='text-xl'>{_localizeField(input.title)}</h1>
           </div>
-          <div className='text text-lg'>
+          <div className='text  md:text-lg'>
             <PortableText value={_localizeField(input.text)} />
           </div>
         </div>

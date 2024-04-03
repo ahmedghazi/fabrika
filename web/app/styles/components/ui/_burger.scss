@@ -1,11 +1,18 @@
 .burger-wrapper {
   position: fixed;
-  right: 1em;
-  top: 1em;
+  right: var(--space-md-mobile);
+  top: var(--space-md-mobile);
   //height: $headerHeight;
   // padding: 11px 5px;
   z-index: 250;
-  // border: $border;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 25px;
+    height: 14px;
+    // background-color: orange;
+  }
   &.active {
     .burger {
       @include burger-to-cross();
@@ -15,7 +22,7 @@
     }
   }
   .burger {
-    //transform: translateY(1px);
-    @include burger(25px, 2px, 4px);
+    transform: translateY(6px);
+    @include burger(25px, 2px, 4px, #fff);
   }
 }

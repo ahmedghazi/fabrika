@@ -251,5 +251,11 @@ sub {
   top: 0.5ex;
 }
 
-@media all and (max-width: $sm) {
+@media all and (max-width: $md) {
+  body {
+    font-size: var(--text-sm);
+  }
+  .text-xl {
+    font-size: var(--text-lg);
+  }
 }

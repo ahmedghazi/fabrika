@@ -39,7 +39,9 @@ const CardPage = ({ input }: Props) => {
 
           <div className='body'>
             <h2 className='text-xl'>{_localizeField(input.title)}</h2>
-            <p className='excerpt text-lg'>{_localizeField(input.excerpt)}</p>
+            <p className='excerpt text-md md:text-lg'>
+              {_localizeField(input.excerpt)}
+            </p>
           </div>
           <div className='footer'>
             {input.subTitle && (

@@ -23,6 +23,7 @@ const config: Config = {
       200: "var(--space-200)",
       gutter: "var(--gutter)",
       "header-height": "var(--header-height)",
+      "md-mobile": "var(--space-md-mobile)",
     },
     colors: {
       // bg: "var(--color-bg)",

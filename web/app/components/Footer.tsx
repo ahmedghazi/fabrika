@@ -14,8 +14,8 @@ type Props = {
 const Footer = ({ settings }: Props) => {
   return (
     <footer id='footer' className='font-mono'>
-      <div className='flex'>
-        <div className='md:w-1/4'>
+      <div className='flex- flex-wrap gap-md-mobile md:gap-0 grid grid-cols-2 md:grid-cols-4'>
+        <div className=''>
           <Link href='/' className='site-name'>
             <Image
               src={"/logo-fabrika.svg"}
@@ -26,7 +26,7 @@ const Footer = ({ settings }: Props) => {
           </Link>
         </div>
         {settings.footerItems?.map((item, i) => (
-          <div className='footer-item md:w-1/4' key={i}>
+          <div className='footer-item ' key={i}>
             <div className='text'>
               <PortableText value={_localizeField(item)} />
             </div>
