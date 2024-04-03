@@ -1,7 +1,7 @@
 .burger-wrapper {
   position: fixed;
   right: var(--space-md-mobile);
-  top: var(--space-md-mobile);
+  top: 1.7em;
   //height: $headerHeight;
   // padding: 11px 5px;
   z-index: 250;
@@ -13,7 +13,7 @@
     height: 14px;
     // background-color: orange;
   }
-  &.active {
+  &.is-active {
     .burger {
       @include burger-to-cross();
     }

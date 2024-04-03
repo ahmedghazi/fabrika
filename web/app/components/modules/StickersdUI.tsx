@@ -1,6 +1,6 @@
 import { ModuleSliderUI, SanityImageAsset } from "@/app/types/schema";
 import { urlFor } from "@/app/utils/sanity-utils";
-import { _getDocSize } from "@/app/utils/utils";
+import { _getDocSize, _minMax } from "@/app/utils/utils";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Draggable from "react-draggable";
@@ -14,6 +14,7 @@ const Sticker = ({ asset }: StickerIProps) => {
   const nodeRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState(defaultPosition);
   const [ready, setReady] = useState<boolean>(false);
+  const rotateMax = 20;
 
   useEffect(() => {
     _placeRandomly();
@@ -24,7 +25,7 @@ const Sticker = ({ asset }: StickerIProps) => {
     const docSize = _getDocSize();
     const x = Math.random() * docSize.w;
     const y = Math.random() * docSize.h;
-    console.log(x, y);
+    // console.log(x, y);
     setPos({ x: x, y: y });
   };
 
@@ -41,7 +42,7 @@ const Sticker = ({ asset }: StickerIProps) => {
             sizes='100vw'
             className='pointer-events-none '
             style={{
-              transform: `rotate(${Math.random() * 10}deg)`,
+              transform: `rotate(${_minMax(-rotateMax, rotateMax)}deg)`,
               // width: "100%",
               // height: "auto",
               // maxHeight: "calc(var(--vh, 1vh) * 100 - var(--header-height))",

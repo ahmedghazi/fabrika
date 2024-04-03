@@ -109,3 +109,11 @@ export const _getDocSize = () => {
     h: height,
   };
 };
+
+export const _minMax = (min: number, max: number) => {
+  const diff = max - min;
+  const rand = Math.random() * diff;
+  console.log(min, max);
+  console.log(diff, rand);
+  return min + rand;
+};
