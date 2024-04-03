@@ -24,9 +24,8 @@ const SliderUI = ({ input }: Props) => {
                   sizes='100vw'
                   style={{
                     width: "100%",
-                    height: "auto",
-                    maxHeight:
-                      "calc(var(--vh, 1vh) * 100 - var(--header-height))",
+                    // height: "auto",
+                    height: "calc(var(--vh, 1vh) * 100 - var(--header-height))",
                     objectFit: "cover",
                     objectPosition: "center center",
                   }}
