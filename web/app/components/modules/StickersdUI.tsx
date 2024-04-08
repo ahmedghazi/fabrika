@@ -74,10 +74,6 @@ const StickersdUI = ({ input }: StickersUIProps) => {
         input.items.map((item, i) => (
           <Sticker asset={item.image?.asset} key={i} />
         ))}
-      {input.items &&
-        input.items.map((item, i) => (
-          <Sticker asset={item.image?.asset} key={i} />
-        ))}
     </section>
   );
 };
