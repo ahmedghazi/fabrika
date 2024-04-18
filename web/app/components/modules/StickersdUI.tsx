@@ -32,7 +32,10 @@ const Sticker = ({ asset }: StickerIProps) => {
   if (!ready) return null;
   return (
     <Draggable defaultPosition={pos} nodeRef={nodeRef}>
-      <div className='sticker pointer-events-none-' ref={nodeRef}>
+      <div
+        className='sticker pointer-events-none-'
+        ref={nodeRef}
+        title='drag me'>
         {asset && asset.metadata && (
           <Image
             src={urlFor(asset)}

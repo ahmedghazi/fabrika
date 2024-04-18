@@ -41,6 +41,7 @@ const config: Config = {
       md: ["var(--text-md)", "1.2"],
       lg: ["var(--text-lg)", "1.075"],
       xl: ["var(--text-xl)", "0.875"],
+      "md-mobile": ["var(--text-md-mobile)", "1.2"],
     },
     fontFamily: {
       sans: "var(--font-primary)",
