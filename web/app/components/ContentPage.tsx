@@ -21,7 +21,7 @@ const ContentPage = ({ input }: Props) => {
           <div className='header'>
             <h1 className='text-xl'>{_localizeField(input.title)}</h1>
           </div>
-          <div className='text text-[14px]  md:text-lg'>
+          <div className='text'>
             <PortableText value={_localizeField(input.text)} />
           </div>
         </div>

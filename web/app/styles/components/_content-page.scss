@@ -6,12 +6,19 @@
     padding: toRem(43) 0;
   }
 
+  .text {
+    font-size: var(--text-lg);
+  }
+
   @media all and (max-width: $md) {
     .header {
       padding: var(--space-md) 0;
     }
     .text-lg {
       font-size: 0.875rem;
+    }
+    .text {
+      font-size: 14px;
     }
   }
 }
