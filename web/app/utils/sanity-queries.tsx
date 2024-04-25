@@ -48,7 +48,10 @@ export async function getSettings(): Promise<Settings> {
  */
 
 export const homeQuery = groq`*[_type == "home"][0]{
-
+  ...,
+  seo{
+    ${seo}
+  },
   modules[]{
     ${moduleImagesUI},
     ${moduleTextsUI},

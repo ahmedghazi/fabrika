@@ -19,6 +19,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const data = await getHome();
+  console.log(data.seo);
   return {
     title: `${data?.seo?.metaTitle || data?.title || ""}`,
     description: data?.seo?.metaDescription,
