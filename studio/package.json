@@ -26,6 +26,7 @@
     "sanity": "^3.36.2",
     "sanity-codegen": "^0.9.8",
     "sanity-plugin-media": "^2.2.5",
+    "sanity-plugin-vercel-deploy": "2.1.6",
     "styled-components": "^6.0.7"
   },
   "devDependencies": {

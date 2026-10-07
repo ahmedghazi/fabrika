@@ -46,9 +46,6 @@ const Sticker = ({ asset }: StickerIProps) => {
             className='pointer-events-none '
             style={{
               transform: `rotate(${_minMax(-rotateMax, rotateMax)}deg)`,
-              // width: "100%",
-              // height: "auto",
-              // maxHeight: "calc(var(--vh, 1vh) * 100 - var(--header-height))",
             }}
             blurDataURL={asset.metadata?.lqip} //automatically provided
             placeholder='blur' // Optional blur-up while loading

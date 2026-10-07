@@ -6,6 +6,7 @@ import {media} from 'sanity-plugin-media'
 import {structure} from './src/deskStructure'
 import {resolveProductionUrl} from './src/actions/resolveProductionUrl'
 import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
+// import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
 const devOnlyPlugins = [getStartedPlugin()]
 
@@ -16,7 +17,13 @@ export default defineConfig({
   projectId: 'a0uiujrw',
   dataset: 'production',
 
-  plugins: [structureTool({structure}), visionTool(), ...(isDev ? devOnlyPlugins : []), media()],
+  plugins: [
+    structureTool({structure}),
+    visionTool(),
+    ...(isDev ? devOnlyPlugins : []),
+    media(),
+    // vercelDeployTool(),
+  ],
 
   schema: {
     types: schemaTypes,
