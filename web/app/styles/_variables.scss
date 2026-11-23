@@ -9,26 +9,30 @@
   --color-hover: #333;
   --color-muted: #999999;
 
-  --font-sans: "ModelStandard-Medium-Sans", "Helvetica Neue",
+  --font-sans:
+    "ModelStandard-Medium-Sans", "Helvetica Neue", "HelveticaNeueRoman",
+    "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular",
+    "Helvetica", "Arial", sans-serif;
+  --font-sans-i:
+    "ModelStandard-Medium-Sans-Italic", "Helvetica Neue", "HelveticaNeueRoman",
+    "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular",
+    "Helvetica", "Arial", sans-serif;
+  --font-mono:
+    "ModelStandard-Medium-Mono", "monospace", "Helvetica Neue",
     "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
     "TeXGyreHerosRegular", "Helvetica", "Arial", sans-serif;
-  --font-sans-i: "ModelStandard-Medium-Sans-Italic", "Helvetica Neue",
+  --font-mono-i:
+    "ModelStandard-Medium-Mono-Italic", "monospace", "Helvetica Neue",
     "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
     "TeXGyreHerosRegular", "Helvetica", "Arial", sans-serif;
-  --font-mono: "ModelStandard-Medium-Mono", "monospace", "Helvetica Neue",
+  --font-mono-b:
+    "ModelStandard-Bold-Mono", "monospace", "Helvetica Neue",
     "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
     "TeXGyreHerosRegular", "Helvetica", "Arial", sans-serif;
-  --font-mono-i: "ModelStandard-Medium-Mono-Italic", "monospace",
-    "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman",
-    "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Arial",
-    sans-serif;
-  --font-mono-b: "ModelStandard-Bold-Mono", "monospace", "Helvetica Neue",
+  --font-mono-b-i:
+    "ModelStandard-Bold-Mono-Italic", "monospace", "Helvetica Neue",
     "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
     "TeXGyreHerosRegular", "Helvetica", "Arial", sans-serif;
-  --font-mono-b-i: "ModelStandard-Bold-Mono-Italic", "monospace",
-    "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman",
-    "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Arial",
-    sans-serif;
 
   --space-xs: 0.4em; //5
   --space-sm: 0.625em; //10
@@ -43,8 +47,10 @@
   --text-sm: 0.625rem; //10px
   --text-md: 1.125rem; //18px
   --text-md-mobile: 0.875rem; //18px
-  --text-lg: 2.5rem; //40px
-  --text-xl: 5rem; //80px
+  // --text-lg: 2.5rem; //40px
+  --text-lg: 1.875rem; //40px
+  // --text-xl: 5rem; //80px
+  --text-xl: 3.75rem; //60px
 
   /*
   xs: 8pt 10px
