@@ -15,9 +15,9 @@ const Header = ({ settings }: Props) => {
       <div className='flex justify-between items-center '>
         <Link href='/' className='site-name'>
           <Image
-            src={"/logo-fabrika-full.svg"}
-            width={200}
-            height={30}
+            src={"/logo-fabrika-sports-blanc.svg"}
+            width={429.5}
+            height={75.5}
             alt={website.title}
           />
         </Link>
