@@ -1,39 +1,60 @@
 @font-face {
   font-family: "ModelStandard-Bold-Mono";
-  src: url("./fonts/ModelStandard-Bold-Mono.woff") format("woff"),
+  src:
+    url("./fonts/ModelStandard-Bold-Mono.woff") format("woff"),
     url("./fonts/ModelStandard-Bold-Mono.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "ModelStandard-Bold-Mono-Italic";
-  src: url("./fonts/ModelStandard-Bold-Mono-Italic.woff") format("woff"),
+  src:
+    url("./fonts/ModelStandard-Bold-Mono-Italic.woff") format("woff"),
     url("./fonts/ModelStandard-Bold-Mono-Italic.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "ModelStandard-Medium-Mono";
-  src: url("./fonts/ModelStandard-Medium-Mono.woff") format("woff"),
+  src:
+    url("./fonts/ModelStandard-Medium-Mono.woff") format("woff"),
     url("./fonts/ModelStandard-Medium-Mono.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "ModelStandard-Medium-Mono-Italic";
-  src: url("./fonts/ModelStandard-Medium-Mono-Italic.woff") format("woff"),
+  src:
+    url("./fonts/ModelStandard-Medium-Mono-Italic.woff") format("woff"),
     url("./fonts/ModelStandard-Medium-Mono-Italic.woff2") format("woff2");
   font-display: swap;
 }
 
+// @font-face {
+//   font-family: "ModelStandard-Medium-Sans";
+//   src:
+//     url("./fonts/ModelStandard-Medium-Sans.woff") format("woff"),
+//     url("./fonts/ModelStandard-Medium-Sans.woff2") format("woff2");
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "ModelStandard-Medium-Sans-Italic";
+//   src:
+//     url("./fonts/ModelStandard-Medium-Sans-Italic.woff") format("woff"),
+//     url("./fonts/ModelStandard-Medium-Sans-Italic.woff2") format("woff2");
+//   font-display: swap;
+// }
+
 @font-face {
-  font-family: "ModelStandard-Medium-Sans";
-  src: url("./fonts/ModelStandard-Medium-Sans.woff") format("woff"),
-    url("./fonts/ModelStandard-Medium-Sans.woff2") format("woff2");
+  font-family: "ModelStandard-Regular-Sans";
+  src:
+    url("./fonts/ModelStandard-Regular-Sans.woff") format("woff"),
+    url("./fonts/ModelStandard-Regular-Sans.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "ModelStandard-Medium-Sans-Italic";
-  src: url("./fonts/ModelStandard-Medium-Sans-Italic.woff") format("woff"),
-    url("./fonts/ModelStandard-Medium-Sans-Italic.woff2") format("woff2");
+  font-family: "ModelStandard-Regular-Sans-Italic";
+  src:
+    url("./fonts/ModelStandard-Regular-Sans-Italic.woff") format("woff"),
+    url("./fonts/ModelStandard-Regular-Sans-Italic.woff2") format("woff2");
   font-display: swap;
 }
 //ABCDiatype-Regular
@@ -120,7 +141,9 @@ a[aria-current="page"] {
   display: inline-block;
   border: 1px solid;
   line-height: 1;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
   font-family: var(--font-mono);
   &--secondary {
     background-color: white;
@@ -177,7 +200,10 @@ p,
 }
 
 .tabnum {
-  font-feature-settings: "tnum" on, "lnum" on, "case" on;
+  font-feature-settings:
+    "tnum" on,
+    "lnum" on,
+    "case" on;
 }
 
 .strong,

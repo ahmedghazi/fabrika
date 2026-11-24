@@ -3,6 +3,7 @@ import React from "react";
 import { Settings } from "../types/schema";
 import { PortableText } from "next-sanity";
 import { _localizeField } from "../utils/utils";
+import portableTextComponents from "../utils/portableTextComponents";
 import Link from "next/link";
 import Image from "next/image";
 import website from "../config/website";
@@ -28,7 +29,10 @@ const Footer = ({ settings }: Props) => {
         {settings.footerItems?.map((item, i) => (
           <div className='footer-item ' key={i}>
             <div className='text'>
-              <PortableText value={_localizeField(item)} />
+              <PortableText
+                value={_localizeField(item)}
+                components={portableTextComponents}
+              />
             </div>
           </div>
         ))}
